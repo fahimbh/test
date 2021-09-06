@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vue Js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<div id="vue1">
+			<h1 v-on:click="join">Hello, world!</h1>
+			<div class="vue">
+				<span :title="naim" v-if="logic">
+					Hover the element to see the title rendered by the vue <br>
+					{{title}}
+				</span>
+				<span v-else>Logic isn't true</span>
+				<ul>
+					<li v-for="loop in loops">
+						{{loop.name}}
+					</li>
+				</ul>
+				<button class="btn btn-primary" v-on:click="reverseMessage">Click</button>
+			</div>
+		</div><hr>
+
+		<div class="text-center" id="vue2">
+			<h2>Vue Calculator</h2>
+			<div class="container">
+				<div v-if="result" class="alert alert-success">
+					<b>Result: {{total}}</b>
+				</div>
+				<div v-if="error" class="alert alert-danger">
+					{{errText}}
+				</div>
+			</div>
+			
+			<div class="row justify-content-center">
+				Value 1: <input @keyup="validate" v-model="val1" type="text">
+				Value 2: <input @keyup="validate" v-model="val2" type="text"><br><br>
+
+				<form>
+					Sum: <input v-model="operator" type="radio"  value="+"><br>
+					Deduct: <input  v-model="operator" type="radio" value="-"><br>
+					Multiply: <input  v-model="operator" type="radio" value="*"><br>
+					Divide: <input v-model="operator" type="radio" value="/">
+				</form>
+
+				<br><br>
+				<button @click="calc" class="btn btn-success">Calculate</button>
+				<button @click="reset" class="btn btn-warning">Reset</button>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	var app2 = new Vue({
+		el: '#vue2',
+		data: {
+			val1: '',
+			val2: '',
+			operator: '',
+			total: '',
+			errText: '',
+			result: false,
+			error: false,
+		},
+		methods: {
+			calc: function(){
+				let opt = this.operator;
+				let val1 = Number(this.val1);
+				let val2 = Number(this.val2);
+
+				switch (opt) {
+					case '+':
+					this.total = val1 + val2;
+					break;
+					case '-':
+					this.total = val1 - val2;
+					break;
+					case '*':
+					this.total = val1 * val2;
+					break;
+					case '/':
+					this.total = val1 / val2;
+					break;
+					default:
+						return 0;
+						break;
+					}
+
+					if (isNaN(this.total)) {
+						this.validate();
+					}else{
+						this.result = true;
+						this.error = false;
+					}
+				},
+				reset: function(){
+					this.val1 = '';
+					this.val2 = '';
+					this.error = false;
+					this.result = false;
+				},
+				validate: function(){
+					if (isNaN(this.val1) || isNaN(this.val2)) {
+						this.result = false;
+						this.error = true;
+						this.errText = 'Your Input Is Not Valid!'
+					}else{
+						this.error = false;
+					}
+				}
+
+			}
+		})
+
+	var app = new Vue({
+		el: '#vue1',
+		data: {
+			naim: 'Hello Naim',
+			title: 'YOu loaded this page on ' + new Date().toLocaleString(),
+			logic: true,
+			loops: [
+			{name: 'NaimBH'},
+			{name: 'NaimBH'},
+			{name: 'NaimBH'},
+			]
+
+		},
+		methods: {
+			reverseMessage: function(){
+				this.title = this.title.split('').reverse();
+			},
+			join: function(){
+				this.title = this.title.join('');
+			}
+		}
+	})
+</script>
+</body>
+</html>

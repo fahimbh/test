@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		function setup_country_change(){
+			$('#country').change(update_cities);
+		}
+		function update_cities(){
+			var country = $('#country option:selected').attr('value');
+			$.post('get_cities.php', country);
+		}
+		function show_cities(cities){
+			$('#cities').html();
+		}
+		$(document).ready(setup_country_change);
+	</script>
+</head>
+<body>
+	<form id="select_country" name="select_country" method="POST"
+	action="#">
+	<table>
+		<tr> <th>Country</th>
+			<td>
+				<select name="country" id="country">
+					<option value="" selected="selected">Please
+					select country.</option>
+					<option value="au">Australia</option>
+					<option value="us">United States</option>
+					<option value="uk">United Kingdom</option>
+				</select>
+			</td>
+		</tr>
+		<tr> <th>Cities</th>
+			<td id="cities"> </td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

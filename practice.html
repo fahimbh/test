@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lets be FullStack</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="bootstrap-4.4.1/css/bootstrap.min.css">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="fontawesome-5.12.0/css/all.css">
+	<!-- local css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header class="container">
+		<nav>
+			<ul class="main-ul">
+				<li class="logo"><a class="nav-items" href="#">MyLaptopBD.com<img width="30px" src="images/soft.ico" alt=""></a></li>
+				<li><a class="nav-items" href="#"><i class="fas fa-home"></i> Home</a></li>
+				<li class="about-us"><a class="nav-items" href="#"><i class="fas fa-info-circle"></i> About Us <i class="fas fa-caret-down"></i></a>
+					<ul class="submenu-container">
+						<li class="nav-head">About Us</li>
+						<li><a class="submenu nav-items" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+						<li><a class="submenu nav-items" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+						<li><a class="submenu nav-items" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+						<li class="follow-us"><a class="submenu nav-items" href="#"><i class="far fa-envelope"></i> Follow Us <i class="fas fa-caret-right"></i></a>
+							<ul class="follow">
+								<li><a class="submenu nav-items" href="#"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+								<li><a class="submenu nav-items" href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+								<li><a class="submenu nav-items" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="support"><a class="nav-items" href="#"><i class="far fa-life-ring"></i> Support <i class="fas fa-caret-down"></i></a>
+					<ul class="submenu-container">
+						<li><a class="submenu nav-items" href="#"><i class="fas fa-envelope"></i> Call Us</a></li>
+						<li><a class="submenu nav-items" href="#"><i class="fas fa-envelope"></i> Mail Us</a></li>
+						<li><a class="submenu nav-items" href="#"><i class="fas fa-envelope"></i> Live Chat</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="nav-items" href="#"><i class="fas fa-envelope"></i> Contact Us
+					</a>
+					<!-- dropdown -->
+					
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+
+		<div class="box">
+			<div class="item">
+				<div class="img-box">
+					<img style="width: 80px; height: 80px;" src="images/NaimBinHasan.jpg" alt="">
+				</div>
+				<a href="#" class="d-block text-center">An Example</a>
+			</div>
+		</div>
+
+		<a id="click" class="btn btn-danger p-2" href="#">Click</a>
+
+
+
+
+		<!-- dropdown -->
+		<div id="loc-box" class="location-box d-none">
+			<form action="">
+				<div class="form-group">
+					<label for="div"><b>Division:</b></label>
+					<select class="form-control input-sm" id="div">
+						<option>Select Division</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="dis"><b>District:</b></label>
+					<select class="form-control input-sm" id="dis">
+						<option>Select District</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="upazila"><b>Upazila:</b></label>
+					<input type="text" name="upazila" placeholder="Type Upazila Name" id="upazila" class="form-control input-sm">
+				</div>
+				<button type="submit" class="btn btn-danger text-center">Search</button>
+			</form>
+		</div>
+	</main>
+
+
+	<!-- bootstrap scripts -->
+
+	<script src="bootstrap-4.4.1/popper.min.js"></script>
+	<script src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
+	<!-- local scripts -->
+	<script type="text/javascript">
+
+	// $(document).ready(function(){
+
+	// 	function myHover(parent) {
+	// 		$(parent).hover(function() {
+	// 			$(this).children("ul").stop().show("slow");
+	// 			$(this).children('a').addClass('active')
+	// 		}, function() {
+	// 			$(this).children("ul").stop().hide("fast");
+	// 			$(this).children('a').removeClass('active');
+	// 		}
+	// 		);
+	// 	};
+
+	// 	myHover(".about-us");
+	// 	myHover(".follow-us");
+	// 	myHover(".support");
+
+
+
+	// 	$('#click').click(function() {
+	// 		if ($('#loc-box').hasClass('d-none')) {
+	// 			$('#loc-box').removeClass('d-none');
+	// 		}else{
+	// 			$('#loc-box').toggle();
+	// 		}
+	// 	});
+
+	// });
+
+
+
+
+		// $(".times").click(function() {
+		// 	if ($(this).hasClass('fa-globe-americas')) {
+		// 		$(this).removeClass('fa-globe-americas')
+		// 		$(this).addClass('fa-times')
+		// 		$("nav").toggle()
+		// 	} else {
+		// 		$(this).removeClass('fa-times')
+		// 		$(this).addClass('fa-globe-americas')
+		// 		$("nav").toggle()
+		// 	}
+		// });
+	</script>
+</body>
+</html>
+
+<!-- 1. '#country'
+2. function(update_cities)
+3. '#country'
+4. blank
+5.
+6. 
+7. 
+8. function(setup_country_change) -->
+
+
+

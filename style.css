@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Carter+One&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+
+ul {
+	background-color: blue;
+}
+
+li a:hover {
+	background-color: navy;
+	text-decoration: none;
+	color: white;
+}
+
+.main-ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.main-ul > li {
+	padding: 5px;
+}
+
+.nav-items {
+	padding: 5px 8px;
+	display: inline-block;
+	color: white;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.logo {
+	margin-right: auto;
+	font-weight: bold;
+}
+
+.main-ul > li:nth-last-child(1) {
+	border-left: 1px solid #89A4D0;
+}
+
+li ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: absolute;
+	padding: 3px 5px;
+	display: none;
+	box-shadow: -1px 3px 10px -4px rgba(0,0,0,0.75);
+	border-right: .8px outset black;
+	border-bottom: .8px outset black;
+	border-left: .8px outset lightgrey;
+}
+
+.submenu {
+	padding: 5px 10px;
+	margin: 0;
+	width: 160px;
+}
+
+.nav-head {
+	background-color: skyblue;
+	color: white;
+	padding: 5px;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.follow-us {
+	border-top: 1px solid #5E7CB3;
+	padding-top: 5px;
+	margin-top: 5px;
+	position: relative;
+}
+
+.follow {
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+
+.active {
+	background-color: navy;
+}
+
+.box {
+	background-color: grey;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.box .item {
+	margin: 20px;
+}
+
+.box .item .img-box{
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: lightgrey;
+}
+
+/* location box */
+.location-box {
+	padding: 13px;
+	background-color: rgba(135, 206, 235, .5);
+	width: 250px;
+	border-radius: 5px;
+	position: absolute;
+	right: 0px;
+}
+
+
+/* tablets media queries */
+@media all and (max-width: 992px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media all and (min-width: 768px) {
+
+} 
+
+
+
+
